@@ -6,35 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>539</width>
-    <height>76</height>
+    <width>361</width>
+    <height>375</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>UARTmonitor</string>
+   <string>Device Enrollment</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLineEdit" name="le_mac"/>
-   </item>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="1">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Minimum</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item row="0" column="2">
       <widget class="QPushButton" name="pb_connect">
        <property name="palette">
@@ -487,6 +468,22 @@
      <item row="0" column="0">
       <widget class="QComboBox" name="cb_device"/>
      </item>
+     <item row="0" column="1">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Minimum</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
      <item row="0" column="3">
       <widget class="QPushButton" name="pb_exit">
        <property name="palette">
@@ -937,6 +934,95 @@
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="lb_mac">
+           <property name="text">
+            <string>Device MAC</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_id">
+           <property name="text">
+            <string>Device ID</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lb_loc">
+           <property name="text">
+            <string>Location</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="le_mac"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_id"/>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_loc"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pb_enr">
+         <property name="text">
+          <string>Enroll</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_mod">
+         <property name="text">
+          <string>Modify</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_del">
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="table_list">
+     <property name="rowCount">
+      <number>5</number>
+     </property>
+     <property name="columnCount">
+      <number>3</number>
+     </property>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
+     <column/>
+     <column/>
+     <column/>
+    </widget>
    </item>
   </layout>
  </widget>

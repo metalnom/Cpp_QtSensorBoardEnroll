@@ -30,28 +30,35 @@ Widget::Widget(QWidget *parent)
 }
 
 void Widget::connectButton() {
-    if(m_serial->isOpen()) {
+    if(ui->pb_connect->text() == "DISCONNECT") {
+        ui->pb_connect->setText("CONNECT");
+        m_serial->close();
         return;
     }
 
-    QString devName = ui->cb_device->currentText().trimmed();
-    m_serialSettings.portname = devName;
-    m_serial->setPortName(m_serialSettings.portname);
-    m_serial->setBaudRate(m_serialSettings.baudRate);
-    m_serial->setDataBits(m_serialSettings.dataBits);
-    m_serial->setParity(m_serialSettings.parity);
-    m_serial->setStopBits(m_serialSettings.stopBits);
-    m_serial->setFlowControl(m_serialSettings.flowControl);
+    if(ui->pb_connect->text() == "CONNECT") {
+        if(m_serial->isOpen()) {
+            return;
+        }
+        QString devName = ui->cb_device->currentText().trimmed();
+        m_serialSettings.portname = devName;
+        m_serial->setPortName(m_serialSettings.portname);
+        m_serial->setBaudRate(m_serialSettings.baudRate);
+        m_serial->setDataBits(m_serialSettings.dataBits);
+        m_serial->setParity(m_serialSettings.parity);
+        m_serial->setStopBits(m_serialSettings.stopBits);
+        m_serial->setFlowControl(m_serialSettings.flowControl);
 
-    if(!m_serial->open(QIODevice::ReadWrite)) {
-        qDebug() << "error message: " << m_serial->errorString();
+        if(!m_serial->open(QIODevice::ReadWrite)) {
+            qDebug() << "error message: " << m_serial->errorString();
+        }
+        ui->pb_connect->setText("DISCONNECT");
+        return;
     }
-    ui->pb_connect->setText("CONNECTED");
 }
 
 void Widget::exitButton() {
-//    Widget::close();
-    qDebug() << ui->le_mac->text();
+    Widget::close();
 }
 
 void Widget::error(QSerialPort::SerialPortError err) {
@@ -63,7 +70,6 @@ void Widget::error(QSerialPort::SerialPortError err) {
 
 void Widget::readData() {
     const QString data = m_serial->readAll();
-    qDebug() << data;
     if(data == "\r" || data == "\n") return;
     ui->le_mac->insert(data);
 }

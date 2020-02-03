@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.10.1, 2020-01-30T11:57:08. -->
+<!-- Written by QtCreator 4.10.1, 2020-01-31T09:11:47. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -303,9 +303,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SerialCOM</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">SerialCOM2</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/metalnom/QTwork/MiniProject_SensorBoard_Enroll/SerialCOM.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">SensorBoardEnroll</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/metalnom/QTwork/MiniProject_SensorBoard_Enroll/SensorBoardEnroll.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
