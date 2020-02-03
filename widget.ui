@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>361</width>
-    <height>375</height>
+    <width>362</width>
+    <height>384</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Device Enrollment</string>
+   <string>장치 등록</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
@@ -461,7 +461,7 @@
         </palette>
        </property>
        <property name="text">
-        <string>CONNECT</string>
+        <string>접속하기</string>
        </property>
       </widget>
      </item>
@@ -929,11 +929,61 @@
         </palette>
        </property>
        <property name="text">
-        <string>EXIT</string>
+        <string>종료</string>
        </property>
       </widget>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="palette">
+      <palette>
+       <active>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>239</red>
+           <green>41</green>
+           <blue>41</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </active>
+       <inactive>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>239</red>
+           <green>41</green>
+           <blue>41</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </inactive>
+       <disabled>
+        <colorrole role="WindowText">
+         <brush brushstyle="SolidPattern">
+          <color alpha="255">
+           <red>190</red>
+           <green>190</green>
+           <blue>190</blue>
+          </color>
+         </brush>
+        </colorrole>
+       </disabled>
+      </palette>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>장치의 RST버튼 누른 후 10초 내에 접속하기 버튼 클릭</string>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -944,21 +994,21 @@
          <item>
           <widget class="QLabel" name="lb_mac">
            <property name="text">
-            <string>Device MAC</string>
+            <string>장치MAC</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="lb_id">
            <property name="text">
-            <string>Device ID</string>
+            <string>장치ID</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="lb_loc">
            <property name="text">
-            <string>Location</string>
+            <string>위치</string>
            </property>
           </widget>
          </item>
@@ -982,23 +1032,23 @@
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QPushButton" name="pb_enr">
+        <widget class="QPushButton" name="pb_ins">
          <property name="text">
-          <string>Enroll</string>
+          <string>등록</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pb_mod">
+        <widget class="QPushButton" name="pb_upd">
          <property name="text">
-          <string>Modify</string>
+          <string>수정</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="pb_del">
          <property name="text">
-          <string>Delete</string>
+          <string>삭제</string>
          </property>
         </widget>
        </item>
@@ -1007,7 +1057,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableWidget" name="table_list">
+    <widget class="QTableWidget" name="tb_list">
      <property name="rowCount">
       <number>5</number>
      </property>

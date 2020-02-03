@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QtSerialPort/QSerialPort>
 #include <QtSerialPort/QSerialPortInfo>
+#include <QtSql/QtSql>
+#include <QtSql/QSqlDatabase>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -31,10 +33,21 @@ private:
     SerialSettings m_serialSettings;
     QSerialPort *m_serial;
 
+    QSqlDatabase db;
+    QSqlTableModel *model;
+
+    void initDB();
+    void showTable();
+
 private slots:
     void connectButton();
     void exitButton();
     void readData();
     void error(QSerialPort::SerialPortError err);
+    void tableClicked(const QModelIndex &index);
+
+    void insertButton();
+//    void updateButton();
+//    void deleteButton();
 };
 #endif // WIDGET_H
