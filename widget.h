@@ -6,6 +6,7 @@
 #include <QtSerialPort/QSerialPortInfo>
 #include <QtSql/QtSql>
 #include <QtSql/QSqlDatabase>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
@@ -36,6 +37,8 @@ private:
     QSqlDatabase db;
     QSqlTableModel *model;
 
+    QMessageBox qmsg;
+
     void initDB();
     void showTable();
 
@@ -47,7 +50,8 @@ private slots:
     void tableClicked(const QModelIndex &index);
 
     void insertButton();
-//    void updateButton();
-//    void deleteButton();
+    void updateButton();
+    void deleteButton();
+    void initeditorButton();
 };
 #endif // WIDGET_H
